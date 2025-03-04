@@ -8,7 +8,7 @@ export default function LandingPage() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
         <div className="container flex h-16 items-center justify-between p-4">
           <div className="flex items-center gap-2 font-bold text-xl">
            <Logo></Logo>
@@ -37,7 +37,7 @@ export default function LandingPage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-28 md:py-28">
+        <section className="py-40 md:py-40">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="flex flex-col justify-center space-y-4">
@@ -63,7 +63,7 @@ export default function LandingPage() {
                 </div>
               </div>
               <div className="flex items-center justify-center">
-                <div className="relative w-full max-w-[500px] aspect-video overflow-hidden rounded-xl border border-border/50 bg-muted/50">
+                <div className="relative w-full max-w-[500px] aspect-video overflow-hidden rounded-xl border border-border/50 bg-muted/50 shadow-xl">
                   <Image
                     src="/data-user.png?height=500&width=800"
                     alt="Mithrandir Dashboard"
@@ -91,42 +91,62 @@ export default function LandingPage() {
                 </p>
               </div>
             </div>
-            <div className="grid gap-6 mt-8 md:grid-cols-3">
-              <div className="flex flex-col p-6 space-y-4 rounded-lg border border-transparent bg-background relative overflow-hidden group">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+              <div className="col-span-1 md:col-span-2 lg:col-span-2 p-6 rounded-xl border bg-background/50 backdrop-blur relative overflow-hidden group hover:shadow-lg transition-all duration-300">
                 <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 transform translate-y-1 group-hover:translate-y-0 transition-transform"></div>
-                <div className="p-2 rounded-full bg-muted w-10 h-10 flex items-center justify-center">
-                  <Lightbulb className="w-5 h-5 text-foreground" />
-                </div>
-                <div className="space-y-2">
-                  <h3 className="text-xl font-bold">Instant Insights</h3>
-                  <p className="text-muted-foreground">
-                    Uncover hidden patterns and opportunities in your business data without waiting for reports or
-                    analysts.
-                  </p>
+                <div className="flex flex-col md:flex-row gap-6">
+                  <div className="relative w-full md:w-1/2 aspect-[4/3] rounded-lg overflow-hidden">
+                    <Image
+                      src="/insights-dashboard.png"
+                      alt="AI-powered insights dashboard"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="md:w-1/2 space-y-4">
+                    <h3 className="text-2xl font-bold">Instant Insights</h3>
+                    <p className="text-muted-foreground text-lg">
+                      Uncover hidden patterns and opportunities in your business data without waiting for reports or analysts. Our AI analyzes your data in real-time.
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div className="flex flex-col p-6 space-y-4 rounded-lg border border-transparent bg-background relative overflow-hidden group">
+
+              <div className="col-span-1 p-6 rounded-xl border bg-background/50 backdrop-blur relative overflow-hidden group hover:shadow-lg transition-all duration-300">
                 <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 transform translate-y-1 group-hover:translate-y-0 transition-transform"></div>
-                <div className="p-2 rounded-full bg-muted w-10 h-10 flex items-center justify-center">
-                  <Rocket className="w-5 h-5 text-foreground" />
-                </div>
-                <div className="space-y-2">
+                <div className="space-y-4">
+                  <div className="relative w-full aspect-square rounded-lg overflow-hidden">
+                    <Image
+                      src="/proactive-actions.png"
+                      alt="AI recommendations and actions"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                   <h3 className="text-xl font-bold">Proactive Actions</h3>
                   <p className="text-muted-foreground">
                     Get AI-recommended actions tailored to your business goals, not just data visualizations.
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col p-6 space-y-4 rounded-lg border border-transparent bg-background relative overflow-hidden group">
+
+              <div className="col-span-1 md:col-span-2 lg:col-span-3 p-6 rounded-xl border bg-background/50 backdrop-blur relative overflow-hidden group hover:shadow-lg transition-all duration-300">
                 <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 transform translate-y-1 group-hover:translate-y-0 transition-transform"></div>
-                <div className="p-2 rounded-full bg-muted w-10 h-10 flex items-center justify-center">
-                  <SmilePlus className="w-5 h-5 text-foreground" />
-                </div>
-                <div className="space-y-2">
-                  <h3 className="text-xl font-bold">Dead Simple</h3>
-                  <p className="text-muted-foreground">
-                    No complex dashboards or SQL queries. Just ask questions in plain English and get answers instantly.
-                  </p>
+                <div className="flex flex-col md:flex-row gap-6 items-center">
+                  <div className="md:w-2/3 space-y-4">
+                    <h3 className="text-2xl font-bold">Dead Simple Interface</h3>
+                    <p className="text-muted-foreground text-lg">
+                      No complex dashboards or SQL queries. Just ask questions in plain English and get answers instantly. Our natural language interface makes data analysis accessible to everyone on your team.
+                    </p>
+                  </div>
+                  <div className="relative w-full md:w-1/3 aspect-video rounded-lg overflow-hidden">
+                    <Image
+                      src="/simple-interface.png"
+                      alt="Simple natural language interface"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -134,71 +154,88 @@ export default function LandingPage() {
         </section>
 
         {/* How It Works */}
-        <section id="how-it-works" className="py-16">
+        <section id="how-it-works" className="py-16 bg-muted/30">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">How Mithrandir Works</h2>
+                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">How Mithrandir Works</h2>
                 <p className="max-w-[700px] text-muted-foreground md:text-xl">
                   Three simple steps to transform your business decision-making
                 </p>
               </div>
             </div>
-            <div className="grid gap-12 mt-8 lg:grid-cols-2">
-              <div className="space-y-8">
-                <div className="flex gap-4 items-start">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-black flex items-center justify-center text-white font-bold">
-                    1
-                  </div>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2">
-                      <Database className="w-5 h-5" />
-                      <h3 className="text-xl font-bold">Connect Your Data</h3>
+            <div className="grid gap-12 mt-12 lg:grid-cols-2">
+              <div className="space-y-16">
+                <div className="group flex gap-6 items-start transition-all duration-300 hover:translate-x-2">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <Database className="w-6 h-6" />
+                      <h3 className="text-2xl font-bold">Connect Your Data</h3>
                     </div>
-                    <p className="text-muted-foreground">
-                      Securely connect your business tools and data sources with just a few clicks. Works with
-                      QuickBooks, Shopify, Google Analytics, and more.
+                    <p className="text-muted-foreground text-lg">
+                      Securely connect your business tools and data sources with just a few clicks.
                     </p>
+                    <div className="relative w-full rounded-lg overflow-hidden">
+                      <Image
+                        src="/providers.png"
+                        alt="Data sources"
+                        width={346}
+                        height={40}
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
                 </div>
-                <div className="flex gap-4 items-start">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-black flex items-center justify-center text-white font-bold">
-                    2
-                  </div>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2">
-                      <Brain className="w-5 h-5" />
-                      <h3 className="text-xl font-bold">AI Finds Insights</h3>
+
+                <div className="group flex gap-6 items-start transition-all duration-300 hover:translate-x-2">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <Brain className="w-6 h-6" />
+                      <h3 className="text-2xl font-bold">AI Finds Insights</h3>
                     </div>
-                    <p className="text-muted-foreground">
-                      Our AI analyzes your data, identifies trends, anomalies, and opportunities that would take
-                      analysts days to discover.
+                    <p className="text-muted-foreground text-lg">
+                      Our AI analyzes your data in real-time, identifying trends and opportunities.
                     </p>
+                    <div className="grid grid-cols-2 gap-2 pt-2">
+                      {['Revenue Growth', 'Cost Savings', 'Performance', 'Customer Trends'].map((insight) => (
+                        <div key={insight} className="flex items-center gap-2">
+                          <Check className="w-5 h-5 text-green-500" />
+                          <span className="text-sm">{insight}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
-                <div className="flex gap-4 items-start">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-black flex items-center justify-center text-white font-bold">
-                    3
-                  </div>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2">
-                      <MousePointerClick className="w-5 h-5" />
-                      <h3 className="text-xl font-bold">Act in One Click</h3>
+
+                <div className="group flex gap-6 items-start transition-all duration-300 hover:translate-x-2">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <MousePointerClick className="w-6 h-6" />
+                      <h3 className="text-2xl font-bold">Take Action</h3>
                     </div>
-                    <p className="text-muted-foreground">
-                      Get actionable recommendations you can implement immediately, or automate actions directly from
-                      Mithrandir.
+                    <p className="text-muted-foreground text-lg">
+                      Transform insights into results with one-click automated actions.
                     </p>
+                    <div className="flex gap-3 pt-2">
+                      <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-black text-white hover:opacity-90 transition-opacity text-sm">
+                        <MousePointerClick className="w-4 h-4" />
+                        Optimize Pricing
+                      </button>
+                      <button className="flex items-center gap-2 px-4 py-2 rounded-lg border hover:bg-muted transition-colors text-sm">
+                        <MousePointerClick className="w-4 h-4" />
+                        Adjust Inventory
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className="flex items-center justify-center">
-                <div className="relative w-full max-w-[500px] aspect-square overflow-hidden rounded-xl border border-border/50 bg-muted/50">
+
+              <div className="relative flex items-center justify-center lg:h-full">
+                <div className="relative w-full max-w-[500px] aspect-square overflow-hidden rounded-xl border bg-background/50 backdrop-blur shadow-xl">
                   <Image
-                    src="/report-view.png?height=500&width=500"
+                    src="/report-view.png"
                     alt="AI Insight Example"
-                    width={500}
-                    height={500}
+                    fill
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-tr from-background/20 to-transparent"></div>
@@ -250,6 +287,8 @@ export default function LandingPage() {
         </section>
 
         {/* Pricing */}
+
+
         <section id="pricing" className="py-16">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -263,7 +302,7 @@ export default function LandingPage() {
             <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {/* Free Tier */}
               <div className="flex flex-col p-6 bg-background rounded-lg border border-border/50 relative overflow-hidden">
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-400 to-purple-500"></div>
+                <div className="absolute top-0 left-0 right-0 h-1 bg-black"></div>
                 <h3 className="text-xl font-bold">Free</h3>
                 <div className="mt-4 text-4xl font-bold">
                   $0<span className="text-base font-normal text-muted-foreground">/month</span>
@@ -294,7 +333,7 @@ export default function LandingPage() {
 
               {/* Solo Tier */}
               <div className="flex flex-col p-6 bg-background rounded-lg border border-border/50 relative overflow-hidden">
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-pink-400"></div>
+                <div className="absolute top-0 left-0 right-0 h-1 bg-black"></div>
                 <h3 className="text-xl font-bold">Solo</h3>
                 <div className="mt-4 text-4xl font-bold">
                   $19<span className="text-base font-normal text-muted-foreground">/month</span>
@@ -325,8 +364,8 @@ export default function LandingPage() {
 
               {/* Pro Tier */}
               <div className="flex flex-col p-6 bg-background rounded-lg border border-border/50 relative overflow-hidden shadow-lg">
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-pink-500 to-red-500"></div>
-                <div className="absolute -right-12 -top-12 bg-gradient-to-br from-pink-500 to-red-500 w-24 h-24 rotate-45"></div>
+                <div className="absolute top-0 left-0 right-0 h-1 bg-black"></div>
+                <div className="absolute -right-12 -top-12 bg-black w-24 h-24 rotate-45"></div>
                 <div className="absolute right-2 top-2 text-s font-bold text-white">🔥</div>
                 <h3 className="text-xl font-bold">Pro</h3>
                 <div className="mt-4 text-4xl font-bold">
@@ -355,14 +394,14 @@ export default function LandingPage() {
                     <span>Team collaboration features</span>
                   </li>
                 </ul>
-                <Button className="mt-6 bg-gradient-to-r from-pink-500 to-red-500 hover:opacity-90 transition-opacity">
+                <Button className="mt-6 bg-black hover:opacity-90 transition-opacity">
                   Get Started
                 </Button>
               </div>
 
               {/* Enterprise Tier */}
               <div className="flex flex-col p-6 bg-background rounded-lg border border-border/50 relative overflow-hidden">
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500 to-purple-400"></div>
+                <div className="absolute top-0 left-0 right-0 h-1 bg-black"></div>
                 <h3 className="text-xl font-bold">Enterprise</h3>
                 <div className="mt-4 text-4xl font-bold">
                   Custom
@@ -390,7 +429,7 @@ export default function LandingPage() {
                     <span>Dedicated account manager</span>
                   </li>
                 </ul>
-                <Button className="mt-6 bg-gradient-to-r from-red-500 to-purple-500 hover:opacity-90 transition-opacity">
+                <Button className="mt-6 bg-black hover:opacity-90 transition-opacity">
                   Contact Sales
                 </Button>
               </div>
@@ -399,7 +438,7 @@ export default function LandingPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-64 bg-black text-white">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center text-center space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Ready to Transform Your Business?</h2>
@@ -409,11 +448,15 @@ export default function LandingPage() {
               <div className="flex flex-col sm:flex-row gap-4 mt-4">
                 <Button
                   size="lg"
-                  className="black hover:opacity-90 transition-opacity"
+                  className="bg-white text-black hover:bg-white/90"
                 >
                   Get Started Free
                 </Button>
-                <Button size="lg" variant="outline">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-black text-white hover:text-white hover:bg-gray-900 transition-opacity"
+                >
                   Schedule a Demo
                 </Button>
               </div>
