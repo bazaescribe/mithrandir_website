@@ -43,7 +43,7 @@ export default function LandingPage() {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                    Your Business Copilot for <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">Smarter</span> Decisions
+                    Your business copilot for <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">smarter</span> decisions
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
                     Turn data into action—no coding required. Mithrandir analyzes your business data and provides

@@ -5,6 +5,10 @@ export const metadata: Metadata = {
   title: 'Mithrandir',
   description: 'BI without the BS',
   generator: 'v0.dev',
+  icons: {
+    icon: "/favicon.png", // Path to your favicon
+    apple: "/apple-touch-icon.png", // Path to your apple-touch-icon
+  },
 }
 
 export default function RootLayout({
