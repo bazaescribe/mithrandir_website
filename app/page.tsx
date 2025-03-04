@@ -289,7 +289,7 @@ export default function LandingPage() {
         {/* Pricing */}
 
 
-        <section id="pricing" className="py-16">
+        <section id="pricing" className="py-32">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -429,8 +429,8 @@ export default function LandingPage() {
                     <span>Dedicated account manager</span>
                   </li>
                 </ul>
-                <Button className="mt-6 bg-black hover:opacity-90 transition-opacity">
-                  Contact Sales
+                <Button className="mt-6" variant="outline">
+                  Contact sales
                 </Button>
               </div>
             </div>
