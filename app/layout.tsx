@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Mithrandir',
-  description: 'BI without the BS',
+  title: 'Mithrandir - BI wtihout the BS',
+  description: 'Business Intelligence whitout the BS',
   generator: 'v0.dev',
   icons: {
     icon: "/favicon.png", // Path to your favicon
